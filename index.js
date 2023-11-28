@@ -1,3 +1,3 @@
 let body = document.querySelector("body");
 
-render_knappen(body);
+render_structure(body);
