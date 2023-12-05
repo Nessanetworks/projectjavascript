@@ -16,3 +16,4 @@ const SHOES = [
     { "id":2,"name":"Black Nick","price":709,"kind_id":3,"country_id":3,"file_name":"black_nick_sneakers.jpg"},
 ];
 
+
