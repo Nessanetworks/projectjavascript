@@ -1,3 +1,4 @@
+"use strict";
 const SHOES = [
     { "id": 2, "name": "Black Nick", "price": 709, "kind_id": 3, "country_id": 3, "file_name": "black_nick_sneakers.jpg" },
     { "id": 3, "name": "Blue Kids", "price": 349, "kind_id": 1, "country_id": 6, "file_name": "blue_kids_tofflor.jpg" },
@@ -7,18 +8,20 @@ const SHOES = [
     { "id": 7, "name": "Beige Chelsea", "price": 899, "kind_id": 2, "country_id": 1, "file_name": "beige_chelsea_boots.jpg" },
     { "id": 8, "name": "Black Chelsea", "price": 489, "kind_id": 2, "country_id": 4, "file_name": "black_chelsea_boots.jpg" },
 ];
-
-
-
-function studentLeo_filter(shoes, max, min){
-    let result = [];
-
-    for(let shoe of shoes){
-        if(shoe.price >= min && shoe.price <= max){
-            result.push(shoe);
+function filter(shoe_array, x, y) {
+    let new_array = [];
+    for (let shoe of shoe_array) {
+        if (shoe.price >= x && shoe.price <= y) {
+            new_array.push(shoe);
         }
     }
-    return result; 
+    return new_array;
 }
+console.log(filter(SHOES, 500, 1000));
 
-console.log( studentLeo_filter(SHOES, 500, 300) );
+
+
+
+
+
+
