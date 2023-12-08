@@ -10,10 +10,3 @@ function filter(shoe_array, x, y) {
     return new_array;
 }
 console.log(filter(SHOES, 500, 1000));
-
-
-
-
-
-
-
