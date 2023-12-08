@@ -3,7 +3,7 @@ function render_div_container(parent) {
     container.id = "wrapper";
     parent.appendChild(container);
 
-    container.innerHTML = ` <header id="page_top">
+    container.innerHTML = `<header id="page_top">
                             </header>
                             <main>
                                 <div id="bottom_container"></div>
