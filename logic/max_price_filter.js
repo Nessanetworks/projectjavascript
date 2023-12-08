@@ -1,3 +1,11 @@
+/* Todo
+Göra parameter variabel
+Koppla filter till knapparna
+
+
+*/
+
+
 "use strict";
 
 function max_price_500(shoe_array, max_price) {
@@ -35,26 +43,30 @@ function  max_price_700(shoe_array, max_price) {
 };
 console.log(max_price_700(SHOES, 700,));
 
-function createCheckbox (){
-    //Variables
-    let amountOfCheckBoxes = 0;
-    let maxAmountOfCheckBoxes = 3;
+function createCheckbox(numbers) {
+    // Variables
+    for (let i = 0; i < numbers.length; i++) {
+        
+        // DOM
+        let parent = document.querySelector("body");
+        let newDiv = document.createElement("div");
+        let newLabel = document.createElement("LABEL");
+        let newInput = document.createElement("input");
+        newInput.setAttribute("type", "checkbox");
+        newInput.setAttribute("id", "checkbox_" + i); // Set a unique id for each checkbox
+        newLabel.setAttribute("for", "checkbox_" + i); // Set the 'for' attribute of the label to match the checkbox id
+        newLabel.textContent = numbers[i] + " kr"; // Set the text content to the number and " kr"
 
-    for (;amountOfCheckBoxes < maxAmountOfCheckBoxes; amountOfCheckBoxes++){ //vet ej varför semi colon fungerar så här men ok
-
-    //DOM
-    let parent = document.querySelector("body");
-    let newDiv = document.createElement("div");
-    let newParagraph  = document.createElement("p"); newParagraph.textContent = 500;
-    let newInput = document.createElement("input"); newInput.setAttribute("type", "checkbox");
-    
-    //apend
-    parent.appendChild(newDiv);
-    newDiv.appendChild(newParagraph);
-    newDiv.appendChild(newParagraph);
-    newDiv.appendChild(newInput);
-    };
-
+        // Append
+        parent.appendChild(newDiv);
+        newDiv.appendChild(newInput);
+        newDiv.appendChild(newLabel);
+    }
 }
 
-createCheckbox();
+// Example usage with variable numbers
+let customNumbers = [500, 600, 700];
+createCheckbox(customNumbers);
+
+
+
