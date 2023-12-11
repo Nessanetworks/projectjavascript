@@ -1,46 +1,19 @@
-"use strict"; 
-/*
+"use strict";
+
 function render_type_filters(parent) {
 
-    const container = document.createElement("div");
-    container.id = "type_filters";
-    parent.append(container);
-
-    for(let kind of KINDS) {
-        const type_container = document.createElement("div");
-        container.append(type_container);
-        type_container.classList.add("type_container");
-
-        type_container.innerHTML = `
-        <p>${kind.name}</p>
-        <div class="type_container"></div>
-        `;
-    }
-}
-*/
-
-/*
-function render_filter_box (parent, text) {
-
-    const container = document.createElement("div");
-    parent.appendChild(container);
-    container.classList.add("filter_container");
-
     const type_container = document.createElement("div");
-    container.appendChild(type_container);
+    parent.append(type_container);
 
-    for(let kind of KINDS) {
-        const check_container = document.createElement("div");
-        container.append(check_container);
-        check_container.classList.add("type_container");
+    const type_name_container = document.createElement("div");
+    type_container.appendChild(type_name_container);
+    type_name_container.textContent = "TYP";
 
-        check_container.textContent = `${kind.name}`;
-        /*
-        type_container.innerHTML = `
-        <div>TYP</div>
-        <p>${kind.name}</p>
-        <div class="type_container"></div>
-        `; 
+    const type_option_container = document.createElement("div");
+    type_container.appendChild(type_option_container);
+    type_option_container.classList.add("type_option_container");
+
+    for (let kind of KINDS) {
+        render_filter_element(type_option_container, kind.name);
     }
 }
-*/

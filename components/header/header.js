@@ -10,9 +10,6 @@ function render_header_structure() {
                                     <div class="arrow" id="arrow_one">V</div>
                                   </div>
                                   <div class="dropdown_menu hide">
-                                    <div id="type_box">TYP</div>
-                                    <div>TILLVERKNINGSLAND</div>
-                                    <div>MAXPRIS</div>
                                   </div>
                                 </div>
 
@@ -24,31 +21,35 @@ function render_header_structure() {
                                   <div class="popup_box hide">
                                     <img class="team_image" src="media/sko_bilder/cowboy_boots.jpg">
                                   </div>
-                                </div>`;  
-  
-  
+                                </div>`;
+
+
   const arrow_one = document.querySelector("#arrow_one");
   const arrow_two = document.querySelector("#arrow_two");
   const dropdown_menu = document.querySelector(".dropdown_menu");
   const popup_box = document.querySelector(".popup_box");
-  
+
   arrow_one.addEventListener("click", () => {
     dropdown_menu.classList.toggle("hide");
   });
-  
+
+  /*
   window.addEventListener("click", (e) => {
     if (e.target !== arrow_one) {
       dropdown_menu.classList.add("hide");
     }
   });
-  
+  */
+
   arrow_two.addEventListener("click", () => {
     popup_box.classList.toggle("hide");
   });
-  
+
+  /*
   window.addEventListener("click", (e) => {
     if (e.target !== arrow_two) {
       popup_box.classList.add("hide");
     }
   });
+  */
 }

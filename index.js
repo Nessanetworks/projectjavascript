@@ -3,6 +3,9 @@ render_div_container(body);
 
 render_header_structure();
 
-let filter_select = document.querySelector("body");
-render_filter_box(filter_select);
+let dropdown_menu = document.querySelector(".dropdown_menu");
+render_type_filters(dropdown_menu);
 
+render_country_filters(dropdown_menu);
+
+render_price_filters(dropdown_menu);
