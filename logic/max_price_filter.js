@@ -1,11 +1,3 @@
-/* Todo
-Göra parameter variabel
-Koppla filter till knapparna
-
-
-*/
-
-
 "use strict";
 
 function max_price_500(shoe_array, max_price) {
