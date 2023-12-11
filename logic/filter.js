@@ -1,7 +1,7 @@
 "use strict";
 
 function filter_by_country(){
-    let checked_country = document.querySelectorAll(".country_option_container .filter_element .checked");
+    let checked_country = document.querySelectorAll(".country_option_container .checked .text");
 
     let checked_textContent_array = array_map(checked_country, function(element){
         return element.textContent;
@@ -21,6 +21,44 @@ function filter_by_country(){
         return countryId.includes(shoe.country_id);
     });
 
+    console.log(program);
+
     return program;  
 }
+
+
+
+/*
+function renderContainer(){
+    let container = document.createElement("div");
+    container.classList.add("container");
+    document.body.appendChild(container);
+}
+
+
+function renderDiv(array){
+    let container = document.querySelector(".container");
+    container.innerHTML = "";
+
+    for(let element of array){
+
+        const shoeKind = array_find(KINDS, function(obj){return element.kind_id === obj.id});
+        const shoeCountry = array_find(COUNTRIES, function(obj){return element.country_id === obj.id});
+
+        let div_dom = document.createElement("div");
+        container.appendChild(div_dom);
+
+        div_dom.innerHTML =  `<div>
+                                    <div> ${element.name} </div>
+                                    <div> ${element.price} :- </div>
+                                    <div> ${shoeKind.name} </div>
+                                    <div> ${shoeCountry.name} </div>
+                                    <img src="media/sko_bilder/${element.file_name}"> 
+                                </div>
+                                <br>`
+    }
+    console.log(array);
+}
+
+*/
 
