@@ -12,7 +12,7 @@ function render_bottom_container (shoes) {
             <p>${shoes[i].name}</p>
             <p>${shoes[i].price}</p>
         </div>
-        `
+        `;
     }
 
     main.appendChild(bottom_container);
