@@ -1,49 +1,84 @@
+@font-face {
+    font-family: Koulen;
+    src: url(../../fonts/Koulen-Regular.ttf);
+}
+
 header {
     display: grid;
-    grid-template-columns: 400px 700px 150px;
-
-    height: 100px;
-    border-bottom: 1px solid black;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px;
+    border-bottom: 2px solid black;
     font-family: Koulen;
 }
 
 header h1 {
-    font-size: 62px;
-    margin: 0 0 0 40px;
     grid-column: 1;
+    align-self: center;
+    margin-left: 40px;
+    font-size: 58px;
 }
 
-#filter {
+#dropdown {
     grid-column: 2;
-    align-self: center;
-    font-size: 24px;
 }
 
 #about_us {
     grid-column: 3;
+    justify-self: end;
+    margin-right: 40px;
+}
+
+#dropdown,
+#about_us {
     align-self: center;
-    font-size: 24px;
+    font-size: 20px;
+    margin-top: 20px;
 }
 
-#filter_select,
-#about_us_select {
-    width: 20px;
-    height: 20px;
-    border: none;
-    background-color: #cecece;
-
+#filter_button,
+#about_us_button {
+    display: flex;
+    gap: 10px;
 }
 
+.dropdown_menu,
+.popup_box {
+    background-color: white;
+    border: 1px solid black;
+    position: absolute;
+    top: 100px;
+    width: 300px;
+    max-height: 500px;
+    overflow: hidden;
+    transition: all 0.25s;
+}
 
+.popup_box {
+    right: 80px;
+}
 
+.dropdown_menu div {
+    padding: 5px;
+    border: 1px solid black;
+    font-size: 15px;
+}
 
+.hide {
+    max-height: 0;
+    opacity: 0;
+}
 
+.arrow {
+    align-self: center;
+    font-family: helvetica;
+    font-size: 10px;
+    cursor: pointer;
+}
 
+.arrow:hover {
+    color: gray;
+}
 
-
-
-
-@font-face {
-    font-family: Koulen;
-    src: url(../../fonts/Koulen-Regular.ttf);
+.team_image {
+    object-fit: contain;
 }
