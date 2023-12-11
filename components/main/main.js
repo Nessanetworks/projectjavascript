@@ -2,23 +2,18 @@
 function render_bottom_container (shoes) {
 
     const bottom_container = document.querySelector("#bottom_container");
-    const bottom_div = document.createElement("div");
-
-    bottom_div.innerHtml = `
-    
-    <div>
-        <img src="media/sko_biler${shoes.file_name}">
-        <p>${shoes.name}</p>
-        <p>${shoes.price}</p>
-    </div>
-
-    `
     
     for (i = 0; i < shoes.length; i++) {
 
-        
-
+        bottom_container.innerHtml = `
+    
+        <div>
+            <img src="media/sko_biler${shoes[i].file_name}">
+            <p>${shoes[i].name}</p>
+            <p>${shoes[i].price}</p>
+        </div>
+        `
     }
 
-    bottom_container.appendChild(bottom_div);
+    main.appendChild(bottom_container);
 }
