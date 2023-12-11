@@ -1,0 +1,32 @@
+#bottom_container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 40px;
+    margin-right: 40px;
+    height: auto;
+    width: auto;
+    position: relative;
+}
+
+.bottom_div > h1{
+    z-index: 1;
+    position: absolute;
+}
+
+.bottom_div > p{
+    z-index: 1;
+    position: absolute;
+}
+
+.bottom_div{
+    height: 30vh;
+    width: 25vh;
+    background-color: white;
+}
+
+.bottom_div > img{
+    height: 100%;
+    width: 100%;
+   object-fit: contain;
+}
+
