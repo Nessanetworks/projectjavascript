@@ -1,4 +1,4 @@
-
+render_div_container(document.body);
 
 render_header_structure();
 

@@ -24,5 +24,3 @@ function filter_by_country(){
     return program;  
 }
 
-console.log(filter(SHOES, 500, 1000));
-
