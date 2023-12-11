@@ -9,31 +9,6 @@ function filter_price(shoe_array, max_price) {
     }
     return new_array;
 };
-console.log(filter_price(SHOES, 500,));
-
-/* function  max_price_600(shoe_array, max_price) {
-    let new_array = [];
-    for (let shoe of shoe_array) {
-        if (shoe.price <= max_price) {
-            new_array.push(shoe);
-        }
-    }
-    return new_array;
-};
-console.log(max_price_600(SHOES, 600,));
-
-
-function  max_price_700(shoe_array, max_price) {
-    let new_array = [];
-    for (let shoe of shoe_array) {
-        if (shoe.price <= max_price) {
-            new_array.push(shoe);
-        }
-    }
-    return new_array;
-
-};
-console.log(max_price_700(SHOES, 700,)); */
 
 function createCheckbox(numbers, shoe_array) {
 
