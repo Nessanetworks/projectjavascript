@@ -1,0 +1,72 @@
+#bottom_container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 40px;
+    margin-right: 40px;
+    height: auto;
+    width: auto;
+    position: relative;
+}
+
+.bottom_div > h1{
+    z-index: 1;
+    position: absolute;
+}
+
+.bottom_div > p{
+    z-index: 1;
+    position: absolute;
+}
+
+.bottom_div{
+    height: 30vh;
+    width: 25vh;
+    background-color: white;
+}
+
+.bottom_div > img{
+    height: 100%;
+    width: 100%;
+   object-fit: contain;
+}
+
+/* Johanna: 
+
+#bottom_container {
+    height: auto;
+    width: auto;
+    background-color: lightgray;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    justify-items: center;
+}
+
+.bottom_div {
+    margin-top: 25px;
+    height: 62vh;
+    width: 22vw;
+    background-color: white;
+
+    border-radius: 20px;
+}
+
+.bottom_div > h1 {
+    margin: 10px;
+    font-size: 4vh;
+}
+
+.bottom_div > p {
+    margin: 10px;
+    font-size: 2.5vh;
+}
+
+.bottom_div > img {
+    height: 75%;
+    width: 100%;
+    object-fit: cover;
+
+    border-radius: 20px 20px 0 0;
+}
+*/
