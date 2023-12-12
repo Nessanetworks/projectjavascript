@@ -13,3 +13,5 @@ render_price_filters(dropdown_menu);
 let cum = document.querySelector("main");
 
 cum.style.backgroundColor = "blue";
+
+render_bottom_container (SHOES);
