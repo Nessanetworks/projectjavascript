@@ -70,3 +70,42 @@
     border-radius: 20px 20px 0 0;
 }
 */
+
+/* Nora:
+
+#bottom_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+
+  #bottom_container div {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  #bottom_container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+ 
+  #bottom_container h1 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+  }
+  
+ 
+  #bottom_container p {
+    color: #777;
+    font-size: 1.2em;
+    margin: 0;
+  }
+  */
