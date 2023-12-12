@@ -28,37 +28,4 @@ function filter_by_country(){
 
 
 
-/*
-function renderContainer(){
-    let container = document.createElement("div");
-    container.classList.add("container");
-    document.body.appendChild(container);
-}
-
-
-function renderDiv(array){
-    let container = document.querySelector(".container");
-    container.innerHTML = "";
-
-    for(let element of array){
-
-        const shoeKind = array_find(KINDS, function(obj){return element.kind_id === obj.id});
-        const shoeCountry = array_find(COUNTRIES, function(obj){return element.country_id === obj.id});
-
-        let div_dom = document.createElement("div");
-        container.appendChild(div_dom);
-
-        div_dom.innerHTML =  `<div>
-                                    <div> ${element.name} </div>
-                                    <div> ${element.price} :- </div>
-                                    <div> ${shoeKind.name} </div>
-                                    <div> ${shoeCountry.name} </div>
-                                    <img src="media/sko_bilder/${element.file_name}"> 
-                                </div>
-                                <br>`
-    }
-    console.log(array);
-}
-
-*/
 
