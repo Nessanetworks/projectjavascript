@@ -51,7 +51,6 @@ header h1 {
     max-height: 500px;
     overflow: hidden;
     transition: all 0.25s;
-    padding: 0;
 
     border-radius: 0 0 10px 10px;
 }
@@ -64,9 +63,9 @@ header h1 {
     right: 80px;
 }
 
-.dropdown_menu div {
-    padding: 5px;
+.dropdown_menu div:first-child {
     font-size: 15px;
+    margin-left: 5px;
 }
 
 .hide {
