@@ -1,19 +1,26 @@
 "use strict";
 
 function filter_by_country(){
-    let checked_country = document.querySelectorAll(".country_option_container .checked .text");
+    let checked_country = document.querySelectorAll(".price_option_container .checked .text");
 
     let checked_textContent_array = array_map(checked_country, function(element){
         return element.textContent;
     });
 
-    let countriesArray = array_map(checked_textContent_array, function(name){
-        return array_find(COUNTRIES, function(country){
-            return name === country.name;
-        }); 
-    });
+    let result = [];
 
-    let countryId = array_map(countriesArray, function(country){
+    for(let number of checked_textContent_array){
+        for(let shoe of SHOES){
+            if(shoe.price <= number){
+                result.push(shoe);
+            }
+        }
+    }
+
+    console.log(result);
+}
+/* 
+    let countryId = filter_price(countriesArray, function(country){
         return country.id;
     });
 
@@ -24,7 +31,7 @@ function filter_by_country(){
     console.log(program);
 
     return program;  
-}
+} */
 
 
 

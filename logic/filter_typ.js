@@ -1,4 +1,4 @@
-"use strict"
+/* "use strict"
 
 function filterShoesByType(shoeArray, type) {
   const result = [];
@@ -29,3 +29,4 @@ const sneakers = filterShoesByType(SHOES, 3);
 /*KINDS.values = ;*/
 
 
+ */

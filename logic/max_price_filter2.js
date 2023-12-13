@@ -18,4 +18,3 @@ function filter_by_maxpris(){
     return program;  
 
 }
-
