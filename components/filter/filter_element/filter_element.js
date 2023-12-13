@@ -16,5 +16,6 @@ function render_filter_element(parent, text) {
     container.addEventListener("click", function () {
         container.classList.toggle("checked");
         filter_by_country();
+        filter_by_type();
     });
 }
