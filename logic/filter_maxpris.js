@@ -1,6 +1,6 @@
 "use strict";
 
-function filter_by_country(){
+function filter_by_price(){
     let checked_country = document.querySelectorAll(".price_option_container .checked .text");
 
     let checked_textContent_array = array_map(checked_country, function(element){
