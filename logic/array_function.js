@@ -25,4 +25,3 @@ function array_map(array, test_function){
     }
     return result;
 }
-/* dasda */

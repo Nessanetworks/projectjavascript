@@ -15,14 +15,6 @@ function filter_by_price(){
     }
     console.log(result);
 
-function filter_review(shoe){
-    let array_shoe_review = array_filter(REVIEWS, function(review){
-        return shoe.id === review.shoe_id;
-    });
-
-    
-}
-
 }
 
 
