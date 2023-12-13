@@ -8,3 +8,7 @@
     flex-wrap: wrap;
     padding: 0;
 }
+
+.price_option_container div:first-child {
+    margin-left: 0;
+}

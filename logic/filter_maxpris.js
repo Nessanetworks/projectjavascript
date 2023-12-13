@@ -2,25 +2,20 @@
 
 function filter_by_price  (){
     let checked_country = document.querySelectorAll(".price_option_container .checked .text");
+function filter_by_country(){
+    let checked_country = document.querySelectorAll(".country_option_container .checked .text");
 
     let checked_textContent_array = array_map(checked_country, function(element){
         return element.textContent;
     });
 
-    let result = [];
+    let countriesArray = array_map(checked_textContent_array, function(name){
+        return array_find(COUNTRIES, function(country){
+            return name === country.name;
+        }); 
+    });
 
-    for(let number of checked_textContent_array){
-        for(let shoe of SHOES){
-            if(shoe.price <= number){
-                result.push(shoe);
-            }
-        }
-    }
-
-    console.log(result);
-}
-/* 
-    let countryId = filter_price(countriesArray, function(country){
+    let countryId = array_map(countriesArray, function(country){
         return country.id;
     });
 
@@ -31,8 +26,17 @@ function filter_by_price  (){
     console.log(program);
 
     return program;  
-} */
+}
 
+function filter_review(shoe){
+    let array_shoe_review = array_filter(REVIEWS, function(review){
+        return shoe.id === review.shoe_id;
+    });
+
+    
+}
+
+}
 
 
 

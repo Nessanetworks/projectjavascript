@@ -25,13 +25,3 @@ function array_map(array, test_function){
     }
     return result;
 }
-
-function filter_price(shoe_array, max_price) { 
-    let new_array = [];
-    for (let shoe of shoe_array) {
-        if (shoe.price <= max_price) {
-            new_array.push(shoe);
-        }
-    }
-    return new_array;
-};
