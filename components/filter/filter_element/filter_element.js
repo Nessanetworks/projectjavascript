@@ -17,5 +17,6 @@ function render_filter_element(parent, text) {
         container.classList.toggle("checked");
         filter_by_country();
         filter_by_type();
+        filter_by_maxprice();
     });
 }
