@@ -20,4 +20,3 @@ function render_bottom_container (shoes) {
 
     main.appendChild(bottom_container);
 }
-
