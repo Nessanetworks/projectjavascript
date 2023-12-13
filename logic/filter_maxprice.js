@@ -5,15 +5,28 @@ function filter_by_maxprice() {
         return element.textContent;
     });
 
-    let result = [];
+    let result = SHOES.filter(function (shoe) {
+        return checked_textContent_array.some(function (maxPrice) {
+            return shoe.price <= maxPrice;
+        });
+    });
 
-    for (let number of checked_textContent_array) {
-        for (let shoe of SHOES) {
-            if (shoe.price <= number) {
+    console.log(result);
+};
+
+
+/*function filter_by_maxprice(){
+    let checked_country = document.querySelectorAll(".price_option_container .checked .text");
+    let checked_textContent_array = array_map(checked_country, function(element){
+        return element.textContent;
+    });
+    let result = [];
+    for(let number of checked_textContent_array){
+        for(let shoe of SHOES){
+            if(shoe.price <= number){
                 result.push(shoe);
             }
         }
     }
-
     console.log(result);
-}
+};*/
