@@ -1,9 +1,10 @@
-#type_filters {
+#price_filters {
     display: flex;
     gap: 5px;
 }
 
-.type_option_container {
+.price_option_container {
     display: flex;
+    flex-wrap: wrap;
     padding: 0;
 }

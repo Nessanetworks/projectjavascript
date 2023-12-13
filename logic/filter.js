@@ -1,12 +1,31 @@
 "use strict";
 
-function filter(shoe_array, x, y) {
-    let new_array = [];
-    for (let shoe of shoe_array) {
-        if (shoe.price >= x && shoe.price <= y) {
-            new_array.push(shoe);
-        }
-    }
-    return new_array;
+function filter_by_country(){
+    let checked_country = document.querySelectorAll(".country_option_container .checked .text");
+
+    let checked_textContent_array = array_map(checked_country, function(element){
+        return element.textContent;
+    });
+
+    let countriesArray = array_map(checked_textContent_array, function(name){
+        return array_find(COUNTRIES, function(country){
+            return name === country.name;
+        }); 
+    });
+
+    let countryId = array_map(countriesArray, function(country){
+        return country.id;
+    });
+
+    let program = array_filter(SHOES, function(shoe){
+        return countryId.includes(shoe.country_id);
+    });
+
+    console.log(program);
+
+    return program;  
 }
-console.log(filter(SHOES, 500, 1000));
+
+
+
+
