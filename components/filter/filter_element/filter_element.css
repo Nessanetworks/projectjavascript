@@ -1,7 +1,8 @@
 .filter_element {
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 5px;
+    padding: 5px;
 }
 
 .check_container {
@@ -11,12 +12,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
 }
 
 .check_mark {
     border: 1px solid black;
     transition: background-color, 0.5s;
+    padding: 5px;
 }
 
 .check_mark:hover {
@@ -26,4 +27,8 @@
 
 .filter_element.checked .check_mark {
     background-color: black;
+}
+
+.text {
+    font-family: helvetica;
 }
