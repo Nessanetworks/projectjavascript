@@ -1,0 +1,10 @@
+#country_filters {
+    display: flex;
+    gap: 5px;
+}
+
+.country_option_container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}

@@ -1,0 +1,9 @@
+#type_filters {
+    display: flex;
+    gap: 5px;
+}
+
+.type_option_container {
+    display: flex;
+    padding: 0;
+}

@@ -1,26 +1,3 @@
-*{
+* {
     box-sizing: border-box;
-}
-
-#wrapper{
-    padding:15px;
-    height: 100vh;
-    width: 100%;
-}
-
-header#page_top{
-    border:2px solid black;
-    background-color: gainsboro;
-    height: 15%;
-}
-
-main{
-    height: 85%;
-}
-
-#bottom_container{
-    height: 100%;
-    border:2px solid black;
-    background-color: gainsboro;
-    border-top: 1px;
 }
