@@ -22,6 +22,23 @@ function render_bottom_container (shoes) {
             <p>${shoe.price}kr</p>
         `;
         bottom_container.appendChild(bottom_div);
+
+        bottom_div.addEventListener("click", function() {
+            const bottom_div_popup = document.createElement("div");
+            bottom_div_popup.classList.toggle("bottom_div_popup");
+
+            bottom_div_popup.innerHTML = `
+            
+            <img src="media/sko_bilder/${shoe.file_name}">
+            <h1>${shoe.name}</h1>
+            <p>${kind.name}</p>
+            <p>${country.name}</p>
+            <p>${shoe.price}kr</p>
+            <img src="media/X.png" id="x">
+            
+            `
+            bottom_container.appendChild(bottom_div_popup);
+        });
     }
 
     main.appendChild(bottom_container);
