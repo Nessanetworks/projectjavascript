@@ -13,4 +13,6 @@ function filter_by_maxprice() {
         }
     }
     console.log(result);
-};
+
+    return result;
+}
