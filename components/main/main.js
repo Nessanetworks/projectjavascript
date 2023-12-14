@@ -27,27 +27,24 @@ function render_bottom_container (shoes) {
     }
 
     main.appendChild(bottom_container);
-}
 
-// Skapar popup div:
+    bottom_div.addEventListener("click", function() {
 
-bottom_div.addEventListener("click", function() {
-            
-    for (const shoe of shoes) {
-        
-        const bottom_div_popup = document.createElement("div");
-        bottom_div_popup.classList.add("bottom_div_popup");
-        bottom_container.appendChild(bottom_div_popup);
+    const bottom_div_popup = document.createElement("div");
+    bottom_div_popup.classList.add("bottom_div_popup");
+    bottom_container.appendChild(bottom_div_popup);
 
-        bottom_div_popup.innerHTML = `
-    
-            <img src="media/sko_bilder/${shoe.file_name}">
-            <h1>${shoe.name}</h1>
-            <p>${kind.name}</p>
-            <p>${country.name}</p>
-            <p>${shoe.price}kr</p>
-            <img src="media/X.png" id="close_x">
-        `;
-    }
+    const country = array_find(COUNTRIES, function(country){return country.id === shoe.country_id;});
+    const kind = array_find(KINDS, function (kind){return kind.id === shoe.kind_id;});
 
-});
+    bottom_div_popup.innerHTML = `
+
+        <img src="media/sko_bilder/${shoe.file_name}">
+        <h1>${shoe.name}</h1>
+        <p>${kind.name}</p>
+        <p>${country.name}</p>
+        <p>${shoe.price}kr</p>
+        <img src="media/X.png" id="close_x">
+    `;
+    })
+};
