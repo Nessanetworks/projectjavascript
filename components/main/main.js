@@ -46,5 +46,6 @@ function render_bottom_container (shoes) {
         <p>${shoe.price}kr</p>
         <img src="media/X.png" id="close_x">
     `;
+    
     })
 };
