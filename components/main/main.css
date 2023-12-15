@@ -48,10 +48,6 @@
     display: flex;
 }
 
-.bottom_div_popup_hide {
-    display: none;
-}
-
 .bottom_div_popup > img {
     border-right: 2px solid black;
 }
