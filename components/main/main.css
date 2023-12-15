@@ -1,3 +1,4 @@
+
 #bottom_container {
     height: auto;
     width: auto;
@@ -10,8 +11,8 @@
 }
 
 .bottom_div {
-    margin-top: 25px;
-    height: 64vh;
+    margin: 25px 0 25px 0;
+    height: 62vh;
     width: 22vw;
     background-color: white;
     border-radius: 20px;
@@ -19,18 +20,26 @@
 }
 
 .bottom_div > h1 {
-    margin: 0px 10px 0px 10px;
+    margin: 0 0 0 15px;
     font-family: Koulen;
     font-size: 3vh;
 }
 
 .bottom_div > p {
-    margin: 0px 10px 10px 10px;
-    font-size: 2.2vh;
+    margin: 0 0 0 15px;
+    font-family: Koulen;
+    color: rgba(0, 0, 0, 0.674);
+    font-size: 2.1vh;
+}
+
+#shoe_price {
+    margin-top: 4px;
+    font-family: "Univers","Helvetica","Arial",sans-serif;
+    font-size: 2.3vh;
 }
 
 .bottom_div > img {
-    height: 73%;
+    height: 70%;
     width: 100%;
     object-fit: cover;
 
@@ -51,7 +60,7 @@
 
 .bottom_container_popup > div > img {
     height: 100%;
-    border-right: 1px solid black;
+    border-right: 2px solid black;
     
 }
 
@@ -60,7 +69,7 @@
 }
 
 .bottom_container_popup > div > h1 {
-    margin-bottom: 0;
+    margin: 0;
     font-family: Koulen;
     font-size: 7vh;
 }
@@ -69,6 +78,10 @@
     margin: 5px;
     font-family: Koulen;
     font-size: 3vh;
+}
+
+.popup_hide {
+    display: none;
 }
 
 button {
