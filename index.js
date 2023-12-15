@@ -14,4 +14,4 @@ let cum = document.querySelector("main");
 
 cum.style.backgroundColor = "blue";
 
-render_bottom_container (SHOES);
+render_bottom_container(SHOES);
