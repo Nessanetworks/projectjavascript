@@ -6,12 +6,10 @@ function render_filter_element(parent, text) {
     parent.appendChild(container);
     container.classList.add("filter_element");
 
-    container.innerHTML = `
-                            <div class="text">${text}</div>
-                            <div class="check_container">
-                                <div class="check_mark"></div>
-                            </div>
-                            `;
+    container.innerHTML = `<div class="text">${text}</div>
+                           <div class="check_container">
+                             <div class="check_mark"></div>
+                           </div>`;
 
     container.addEventListener("click", function () {
         container.classList.toggle("checked");
@@ -19,4 +17,5 @@ function render_filter_element(parent, text) {
         filter_by_type();
         filter_by_maxprice();
     });
+
 }

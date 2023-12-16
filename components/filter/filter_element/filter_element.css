@@ -1,34 +1,29 @@
 .filter_element {
     display: flex;
-    align-items: center;
     gap: 5px;
     padding: 5px;
 }
 
+.text {
+    font-family: helvetica;
+}
+
 .check_container {
-    height: 100%;
-    flex-basis: 16px;
-
     display: flex;
-    justify-content: center;
     align-items: center;
-}
-
-.check_mark {
-    border: 1px solid black;
-    transition: background-color, 0.5s;
-    padding: 5px;
-}
-
-.check_mark:hover {
-    cursor: pointer;
-    box-shadow: 0 0 5px black;
 }
 
 .filter_element.checked .check_mark {
     background-color: black;
 }
 
-.text {
-    font-family: helvetica;
+.check_mark {
+    border: 1px solid black;
+    padding: 5px;
+    transition: background-color, 0.5s;
+}
+
+.check_mark:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px black;
 }
