@@ -55,10 +55,9 @@ function render_header_structure() {
 
 // FIXA: 
 /*
-  window.addEventListener("click", (e) => {
-    if (e.target !== arrow_two) {
-      popup_box.classList.add("hide");
+    window.addEventListener("click", function (e) {
+    if (e.target !== about_us_title || arrow_two || about_us_box) {
+      about_us_box.classList.add("hide");
     }
-  });
-  */
+  })
 
