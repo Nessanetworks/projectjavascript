@@ -43,19 +43,25 @@ function render_bottom_container (shoes) {
                 <p>${kind.name}</p>
                 <p>${country.name}</p>
                 <p id="shoe_price">${shoe.price} kr</p>
-                <div> 
+                <div id="reviews"> 
                     <h2>Reviews</h2>
                     <p>"${review.rev}"</p>
                     <h3>Rating</h3>
                     <p>${review.score}/5</p>
                 </div> 
             </div>
-            <button class="popup_close_button">X</button>
         `;
         
-        // Stänger popup container 
+        // Skapar button  
+        
+        const popup_close_button = document.createElement("button");
+        popup_close_button.setAttribute("id", "popup_close_button");
+        popup_close_button.textContent = "X";
+        bottom_container_popup.appendChild(popup_close_button);
 
-        bottom_container_popup.addEventListener("click", function () {
+        // Stänger popup 
+
+        popup_close_button.addEventListener("click", function () {
             bottom_container.removeChild(bottom_container_popup);
         });
 
@@ -66,4 +72,5 @@ function render_bottom_container (shoes) {
 }
 
 main.appendChild(bottom_container);
+
 }
