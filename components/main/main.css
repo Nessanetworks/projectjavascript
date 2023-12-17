@@ -1,3 +1,7 @@
+@font-face {
+    font-family: Quicksand;
+    src: url(/fonts/Quicksand-SemiBold.ttf);
+}
 
 #bottom_container {
     height: auto;
@@ -51,8 +55,8 @@
     position: fixed;
     background-color: white;
     border: 2px solid black;
-    height: 80%;
-    width: 90%;
+    height: 82%;
+    width: 95%;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -84,14 +88,24 @@
     display: none;
 }
 
-button {
+#popup_close_button {
     position: absolute;
     right: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Quicksand;
     background-color: white;
     border: none;
-    font-size: 30px;
+    font-size: 32px;
     height: 40px;
     width: 40px;
     cursor: pointer;
+}
+
+#popup_close_button:hover {
+    color: rgb(87, 87, 87);
+}
+
+#reviews {
+    background-color: rgb(242, 242, 242);
+    margin-top: 20px;
+    padding: 1px 10px 10px 10px;
 }
