@@ -60,6 +60,8 @@
 
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    transition: all 0.5s;
 }
 
 .bottom_container_popup > div > img {
@@ -84,7 +86,7 @@
     font-size: 3vh;
 }
 
-.popup_hide {
+.hide {
     display: none;
 }
 
