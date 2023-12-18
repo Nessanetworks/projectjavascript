@@ -7,8 +7,6 @@ function render_bottom_container (shoes) {
     const bottom_container = document.querySelector("#bottom_container");
     bottom_container.innerHTML = "";
     
-    const bottom_container_popup = document.createElement("div");
-
     for (const shoe of shoes) {
         
         const country = array_find(COUNTRIES, function(country){return country.id === shoe.country_id;});
@@ -31,6 +29,7 @@ function render_bottom_container (shoes) {
         // Öppnar popup container
         
         bottom_div.addEventListener("click", function() {
+            const bottom_container_popup = document.createElement("div");
             bottom_container_popup.classList.add("bottom_container_popup");
             bottom_container.appendChild(bottom_container_popup);
             
