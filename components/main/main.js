@@ -5,6 +5,7 @@ function render_bottom_container (shoes) {
 
     const main = document.querySelector("main");
     const bottom_container = document.querySelector("#bottom_container");
+    bottom_container.innerHTML = "";
     
     const bottom_container_popup = document.createElement("div");
 
@@ -12,8 +13,6 @@ function render_bottom_container (shoes) {
         
         const country = array_find(COUNTRIES, function(country){return country.id === shoe.country_id;});
         const kind = array_find(KINDS, function (kind){return kind.id === shoe.kind_id;});
-        const review = array_find(REVIEWS, function(review){return review.shoe_id === shoe.id});
-        const score = array_find(REVIEWS, function(review){return review.score === shoe.id});
 
         // Skapar vanlig div: 
 
@@ -65,6 +64,7 @@ function render_bottom_container (shoes) {
 
         bottom_container.appendChild(bottom_div);
     }
+    //main.appendChild(bottom_container);
 }
 
 
@@ -72,9 +72,6 @@ function render_reviews(shoe){
     let review_container = document.querySelector("#reviews");
 
     for(let review of filter_review(shoe)){
-        if(review.rev === undefined){
-            review.rev === "poop";
-        }
 
         review_container.innerHTML += ` <div class="review">    
                                             <p>${review.score} ${review.rev}</p>

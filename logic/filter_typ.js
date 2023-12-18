@@ -1,5 +1,5 @@
 "use strict"
-
+/*
 function filter_by_type() {
 
   let checked_kind = document.querySelectorAll(".type_option_container .checked .text");
@@ -27,7 +27,7 @@ function filter_by_type() {
   return program;
 }
 
-
+*/
 
 
 

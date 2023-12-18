@@ -7,4 +7,4 @@ render_type_filters(dropdown_menu);
 render_country_filters(dropdown_menu);
 render_price_filters(dropdown_menu);
 
-render_bottom_container(SHOES);
+render_bottom_container(filter_programmes());
