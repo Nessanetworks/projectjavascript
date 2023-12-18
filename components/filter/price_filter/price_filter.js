@@ -1,6 +1,6 @@
 "use strict";
 
-let price_array = ["200", "400", "600", "800", "1000"];
+let price_array = ["300", "400", "600", "800", "1000"];
 
 function render_price_filters(parent) {
 
