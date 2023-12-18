@@ -27,11 +27,11 @@ function filter_by_country(){
 }
 
 function filter_review(shoe){
-    let array_shoe_review = array_filter(REVIEWS, function(review){
+    let array_shoe_reviews = array_filter(REVIEWS, function(review){
         return shoe.id === review.shoe_id;
     });
 
-    
+    return array_shoe_reviews;
 }
 
 

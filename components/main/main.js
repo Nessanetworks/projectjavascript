@@ -33,6 +33,7 @@ function render_bottom_container (shoes) {
         
         bottom_div.addEventListener("click", function() {
             bottom_container_popup.classList.add("bottom_container_popup");
+            bottom_container.appendChild(bottom_container_popup);
             
             bottom_container_popup.innerHTML = ` 
             <div>
@@ -43,34 +44,40 @@ function render_bottom_container (shoes) {
                 <p>${kind.name}</p>
                 <p>${country.name}</p>
                 <p id="shoe_price">${shoe.price} kr</p>
-                <div id="reviews"> 
-                    <h2>Reviews</h2>
-                    <p>"${review.rev}"</p>
-                    <h3>Rating</h3>
-                    <p>${review.score}/5</p>
-                </div> 
+                <div id="reviews"></div> 
             </div>
         `;
+            
+           render_reviews(shoe);
+            // Skapar button  
         
-        // Skapar button  
-        
-        const popup_close_button = document.createElement("button");
-        popup_close_button.setAttribute("id", "popup_close_button");
-        popup_close_button.textContent = "X";
-        bottom_container_popup.appendChild(popup_close_button);
+            const popup_close_button = document.createElement("button");
+            popup_close_button.setAttribute("id", "popup_close_button");
+            popup_close_button.textContent = "X";
+            bottom_container_popup.appendChild(popup_close_button);
 
-        // Stänger popup 
+            // Stänger popup 
 
-        popup_close_button.addEventListener("click", function () {
-            bottom_container.removeChild(bottom_container_popup);
+            popup_close_button.addEventListener("click", function () {
+                bottom_container.removeChild(bottom_container_popup);
+            });
         });
 
-        bottom_container.appendChild(bottom_container_popup);
-    });
-
-    bottom_container.appendChild(bottom_div);
+        bottom_container.appendChild(bottom_div);
+    }
 }
 
-main.appendChild(bottom_container);
 
+function render_reviews(shoe){
+    let review_container = document.querySelector("#reviews");
+
+    for(let review of filter_review(shoe)){
+        if(review.rev === undefined){
+            review.rev === "poop";
+        }
+
+        review_container.innerHTML += ` <div class="review">    
+                                            <p>${review.score} ${review.rev}</p>
+                                        </div>`
+    }
 }
