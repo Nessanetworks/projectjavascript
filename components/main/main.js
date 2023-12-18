@@ -58,23 +58,23 @@ function render_bottom_container (shoes) {
             // Stänger popup 
 
             popup_close_button.addEventListener("click", function () {
-                bottom_container.removeChild(bottom_container_popup);
+                bottom_container_popup.classList.add("hide");
             });
         });
 
         bottom_container.appendChild(bottom_div);
     }
-    //main.appendChild(bottom_container);
 }
 
 
-function render_reviews(shoe){
+function render_reviews (shoe) {
+    
     let review_container = document.querySelector("#reviews");
 
-    for(let review of filter_review(shoe)){
+    for (let review of filter_review (shoe)) {
 
         review_container.innerHTML += ` <div class="review">    
-                                            <p>${review.score} ${review.rev}</p>
+                                            <p>${review.score}/5 ${review.rev}</p>
                                         </div>`
     }
 }

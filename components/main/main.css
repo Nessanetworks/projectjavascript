@@ -52,8 +52,8 @@
 
 .bottom_container_popup {
     position: fixed;
-    top:50%;
-    left:50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
 
     background-color: white;
@@ -89,7 +89,7 @@
     font-size: 3vh;
 }
 
-.popup_hide {
+.hide {
     display: none;
 }
 
