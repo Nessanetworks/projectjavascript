@@ -8,8 +8,11 @@ function render_bottom_container(shoes) {
     
     const country = array_find(COUNTRIES, function (country) {return country.id === shoe.country_id;});
     const kind = array_find(KINDS, function (kind) {return kind.id === shoe.kind_id;});
-
+    const review = array_find(REVIEWS, function (review) {return review.id === shoe.kind_id;});
     // Skapar vanlig div:
+    
+    const review_result = [];
+
     const bottom_div = document.createElement("div");
     bottom_div.classList.add("bottom_div");
 
@@ -21,7 +24,8 @@ function render_bottom_container(shoes) {
         <p id="shoe_price">${shoe.price} kr</p>
     `;
 
-    // Öppnar popup container
+    // Öppnar popup container:
+    
     bottom_div.addEventListener("click", function () {
       const bottom_container_popup = document.createElement("div");
       bottom_container_popup.classList.add("bottom_container_popup");
@@ -44,7 +48,8 @@ function render_bottom_container(shoes) {
             </div>
         `;
 
-      // Skapar button
+        // Skapar button
+
       const popup_close_button = document.createElement("button");
       popup_close_button.id = "popup_close_button";
       popup_close_button.textContent = "X";

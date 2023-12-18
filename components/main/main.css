@@ -61,7 +61,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    transition: all 0.5s;
+    transition: all 0.25s;
 }
 
 .bottom_container_popup > div > img {
@@ -107,7 +107,11 @@
 }
 
 #reviews {
-    background-color: rgb(242, 242, 242);
     margin-top: 20px;
     padding: 1px 10px 10px 10px;
+}
+
+#reviews > p {
+    background-color: rgb(242, 242, 242);
+    padding: 10px;
 }
