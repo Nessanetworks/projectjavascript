@@ -74,7 +74,7 @@ function render_reviews(shoe){
     for(let review of filter_review(shoe)){
 
         review_container.innerHTML += ` <div class="review">    
-                                            <p>${review.score} ${review.rev}</p>
+                                            <p>${review.score}/5 ${review.rev}</p>
                                         </div>`
     }
 }
