@@ -73,8 +73,30 @@ function render_reviews(shoe){
 
     for(let review of filter_review(shoe)){
 
+        if(review.rev === ""){
+            review.rev = "Ingen Kommentar";
+        }
+
+        switch(review.score){
+            case 1: 
+                review.score = "&starf;"
+                break;
+            case 2:
+                review.score = "&starf; &starf;"
+                break;
+            case 3:
+                review.score =  "&starf; &starf; &starf;"
+                break;
+            case 4:
+                review.score =  "&starf; &starf; &starf; &starf;"
+                break;
+            case 5:
+                review.score =  "&starf; &starf; &starf; &starf; &starf;"
+                break;
+        }
+
         review_container.innerHTML += ` <div class="review">    
-                                            <p>${review.score}/5 ${review.rev}</p>
+                                            <p>${review.score} </p> <p> ${review.rev}</p>
                                         </div>`
-    }
+    }                            
 }

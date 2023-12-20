@@ -108,7 +108,11 @@
 #reviews {
     background-color: rgb(242, 242, 242);
     margin-top: 20px;
-    padding: 1px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
     height: 250px;
     overflow: scroll;
+}
+
+.review > p:nth-child(1){
+    margin:0;
 }
