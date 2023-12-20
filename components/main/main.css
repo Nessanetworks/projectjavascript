@@ -109,10 +109,14 @@
     background-color: rgb(242, 242, 242);
     margin-top: 20px;
     padding: 10px 10px 10px 10px;
-    height: 250px;
+    height: 300px;
     overflow: scroll;
 }
 
 .review > p:nth-child(1){
     margin:0;
+}
+
+.review > p:nth-child(2){
+    margin-top:0;
 }
