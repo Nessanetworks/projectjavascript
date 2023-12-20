@@ -1,7 +1,3 @@
-@font-face {
-    font-family: Quicksand;
-    src: url(/fonts/Quicksand-SemiBold.ttf);
-}
 
 #bottom_container {
     height: auto;
@@ -96,7 +92,7 @@
 #popup_close_button {
     position: absolute;
     right: 0;
-    font-family: Quicksand;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: white;
     border: none;
     font-size: 32px;
