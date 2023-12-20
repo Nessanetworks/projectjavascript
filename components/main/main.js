@@ -3,7 +3,6 @@
 
 function render_bottom_container (shoes) {
 
-    const main = document.querySelector("main");
     const bottom_container = document.querySelector("#bottom_container");
     bottom_container.innerHTML = "";
     
@@ -43,7 +42,7 @@ function render_bottom_container (shoes) {
                 <p>${kind.name}</p>
                 <p>${country.name}</p>
                 <p id="shoe_price">${shoe.price} kr</p>
-                <div id="reviews"></div> 
+                <div id="reviews"><h2>Reviews</h2></div> 
             </div>
         `;
             
@@ -64,7 +63,6 @@ function render_bottom_container (shoes) {
 
         bottom_container.appendChild(bottom_div);
     }
-    //main.appendChild(bottom_container);
 }
 
 
@@ -73,7 +71,7 @@ function render_reviews(shoe){
 
     for(let review of filter_review(shoe)){
 
-        review_container.innerHTML += ` <div class="review">    
+        review_container.innerHTML += ` <div class="review">
                                             <p>${review.score}/5 ${review.rev}</p>
                                         </div>`
     }

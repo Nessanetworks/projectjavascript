@@ -116,3 +116,12 @@
     height: 250px;
     overflow: scroll;
 }
+
+#reviews > h2 {
+    font-family: "Univers","Helvetica","Arial",sans-serif;
+}
+
+.review > p {
+    font-family: "Univers","Helvetica","Arial",sans-serif;
+    font-style: italic;
+}
