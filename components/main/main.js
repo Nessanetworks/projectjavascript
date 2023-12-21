@@ -17,6 +17,7 @@ function render_bottom_container (shoes) {
         // Skapar vanlig div: 
 
         const bottom_div = document.createElement("div");
+        bottom_container.appendChild(bottom_div);
         bottom_div.classList.add("bottom_div");
 
         bottom_div.innerHTML = `
@@ -33,6 +34,7 @@ function render_bottom_container (shoes) {
         bottom_div.addEventListener("click", function() {
             bottom_container_popup.classList.add("bottom_container_popup");
             bottom_container.appendChild(bottom_container_popup);
+            document.body.style.overflow = "hidden";
             
             bottom_container_popup.innerHTML = ` 
             <div>
@@ -43,13 +45,15 @@ function render_bottom_container (shoes) {
                 <p>${kind.name}</p>
                 <p>${country.name}</p>
                 <p id="shoe_price">${shoe.price} kr</p>
-                <div id="reviews"></div> 
+                <div id="reviews">
+                    
+                </div> 
             </div>
         `;
             
            render_reviews(shoe);
             // Skapar button  
-        
+    
             const popup_close_button = document.createElement("button");
             popup_close_button.setAttribute("id", "popup_close_button");
             popup_close_button.textContent = "X";
@@ -59,10 +63,9 @@ function render_bottom_container (shoes) {
 
             popup_close_button.addEventListener("click", function () {
                 bottom_container.removeChild(bottom_container_popup);
+                document.body.style.overflow = "scroll";
             });
         });
-
-        bottom_container.appendChild(bottom_div);
     }
     //main.appendChild(bottom_container);
 }
@@ -70,33 +73,52 @@ function render_bottom_container (shoes) {
 
 function render_reviews(shoe){
     let review_container = document.querySelector("#reviews");
+    let container = document.querySelector("#header_container");
+    let sum_score = 0;
+
+
 
     for(let review of filter_review(shoe)){
+
+        let score = review.score;
+        sum_score = review.score + sum_score;
 
         if(review.rev === ""){
             review.rev = "Ingen Kommentar";
         }
 
-        switch(review.score){
+        switch(score){
             case 1: 
-                review.score = "&starf;"
+                score = "&starf;"
                 break;
             case 2:
-                review.score = "&starf; &starf;"
+                score = "&starf; &starf;"
                 break;
             case 3:
-                review.score =  "&starf; &starf; &starf;"
+                score =  "&starf; &starf; &starf;"
                 break;
             case 4:
-                review.score =  "&starf; &starf; &starf; &starf;"
+                score =  "&starf; &starf; &starf; &starf;"
                 break;
             case 5:
-                review.score =  "&starf; &starf; &starf; &starf; &starf;"
+                score =  "&starf; &starf; &starf; &starf; &starf;"
                 break;
         }
 
         review_container.innerHTML += ` <div class="review">    
-                                            <p>${review.score} </p> <p> ${review.rev}</p>
-                                        </div>`
-    }                            
+                                            <p>${score}</p><p>${review.rev}</p>
+                                        </div>`;
+    }
+
+    let average_score = sum_score / filter_review(shoe).length;
+    let average_score_str = average_score.toString();
+
+
+    let div_dom = document.createElement("div");
+    review_container.appendChild(div_dom);
+    div_dom.innerHTML = `<h2>OMDÖMEN</h2>
+                        <h3>Genomsnittligt omdöme: ${average_score_str.substring(0, 4)}</h3>`;
+
+
+
 }

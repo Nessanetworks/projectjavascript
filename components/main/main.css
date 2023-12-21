@@ -59,6 +59,7 @@
 
     display: grid;
     grid-template-columns: 1fr 1fr;
+
 }
 
 .bottom_container_popup > div > img {
@@ -70,7 +71,7 @@
 
 .bottom_container_popup > div:nth-child(2) {
     margin: 5vw;
-    overflow: hidden; 
+    overflow: scroll; 
 }
 
 .bottom_container_popup > div > h1 {
@@ -109,9 +110,16 @@
     background-color: rgb(242, 242, 242);
     margin-top: 20px;
     padding: 10px 10px 10px 10px;
-    height: 300px;
-    overflow: scroll;
+
+    display: flex;
+    flex-direction: column-reverse;
+
 }
+
+#reviews h2{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 
 .review > p:nth-child(1){
     margin:0;
@@ -119,4 +127,5 @@
 
 .review > p:nth-child(2){
     margin-top:0;
+    font-style: italic;
 }
