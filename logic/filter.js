@@ -7,34 +7,31 @@ function filter_programmes()
 	if (any_filter_checked("country"))
 	{
 		selected_programmes = filter_by_country(selected_programmes);
-		console.log(selected_programmes);
 	}
 
 	if (any_filter_checked("type"))
 	{
 		selected_programmes = filter_by_type(selected_programmes);
-		console.log(selected_programmes);
 	}
 
 	if (any_filter_checked("price"))
 	{
 		selected_programmes = filter_by_maxprice(selected_programmes);
-		console.log(selected_programmes);
 	}
 
-	console.log(selected_programmes);
 	return selected_programmes;
 }
 
 function any_filter_checked (filter_kind)
 {
-const checked_filters = document.querySelectorAll(`.${filter_kind}_option_container .checked`);
-return checked_filters.length > 0;
+    const checked_filters = document.querySelectorAll(`.${filter_kind}_option_container .checked`);
+    return checked_filters.length > 0;
 }
 
+
 function filter_by_maxprice(program) {
-    let checked_country = document.querySelectorAll(".price_option_container .checked .text");
-    let checked_textContent_array = array_map(checked_country, function (element) {
+    let checked_price = document.querySelectorAll(".price_option_container .checked .text");
+    let checked_textContent_array = array_map(checked_price, function (element) {
         return element.textContent;
     });
     let result = [];
